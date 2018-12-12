@@ -56,4 +56,6 @@ type osClient interface {
 	Interfaces() ([]*Interface, error)
 	BSS(ifi *Interface) (*BSS, error)
 	StationInfo(ifi *Interface) ([]*StationInfo, error)
+	TriggerScan(ifi *Interface) error
+	ScanResult(ifi *Interface) ([]*BSS, error)
 }
